@@ -1,0 +1,53 @@
+# === AlmaDroid 备份 .gitignore ===
+# 策略：git 只存源码+文档+脚本+小资源；大镜像/APK 走 Release 附件或本地归档
+
+# 构建产物
+build/
+**/build/
+.gradle/
+.cxx/
+.idea/
+*.o
+*.a
+*.so
+
+# 安装包（可重建，>100MB 超 GitHub 限制）
+*.apk
+*.aab
+
+# 可重建大资产（rootfs/桌面镜像，随 APK 构建产物走 Release）
+*.tar.gz
+*.zip
+*.img
+
+# 日志 / 运行状态 / 截图
+logs/
+*.log
+screens/
+deploy-watch.log
+build-log.txt
+
+# 本地临时
+*.tmp
+.DS_Store
+
+# 发布签名密钥已从公开仓库移除（防伪冒），构建脚本会自动生成或可自行替换
+*.keystore
+# 第三方依赖（可 npm/gradle 重建）
+node_modules/
+.gradle/
+
+# --- 大体积可重建资产（>100MB 超 GitHub 限制，重新下载即可）---
+work/jdk17/
+work/sdk-home/
+work/sdk-ex/
+work/runtime/
+work/alma-server-*/
+work/tiny-ref/
+work/repack/
+work/jadx-out/
+upgrade-417/alma-417/
+*.b64
+work/repack-src/
+work/dpkg-fix/
+work/pirt-tmp

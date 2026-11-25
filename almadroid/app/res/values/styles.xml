@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#130D0A</item>
+        <item name="android:statusBarColor">#130D0A</item>
+        <item name="android:navigationBarColor">#130D0A</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="SheetAnim" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/sheet_up</item>
+        <item name="android:windowExitAnimation">@anim/sheet_down</item>
+    </style>
+</resources>

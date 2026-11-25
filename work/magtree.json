@@ -1,0 +1,1091 @@
+{
+  "sha": "fe8fb8ac62b0e87a53c8adf0a566a1ed9c68257b",
+  "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/fe8fb8ac62b0e87a53c8adf0a566a1ed9c68257b",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ede8ef75ecbfc586de2cddf5f6a39c113efde356",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/ede8ef75ecbfc586de2cddf5f6a39c113efde356"
+    },
+    {
+      "path": ".github/RELEASE_NOTES_1.0.20.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "989d32f4c294ba7627588184d21aaafab777e04d",
+      "size": 1487,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/989d32f4c294ba7627588184d21aaafab777e04d"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bd97343a57f17694fe5bf9ae13e464ce4c58928",
+      "size": 377,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/0bd97343a57f17694fe5bf9ae13e464ce4c58928"
+    },
+    {
+      "path": "HANDOFF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97864ff139e600942cac74ac2e5eba6aefa37810",
+      "size": 22677,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/97864ff139e600942cac74ac2e5eba6aefa37810"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba021e67fcfaa9ddf92c2cc2063e5728b66a64f5",
+      "size": 1314,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/ba021e67fcfaa9ddf92c2cc2063e5728b66a64f5"
+    },
+    {
+      "path": "README.dev.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9451a4ea797e8a881828e095121b86f2b83447f6",
+      "size": 25267,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/9451a4ea797e8a881828e095121b86f2b83447f6"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "991dc7d3bea8bff9fd21a646177fa11894f07c96",
+      "size": 7831,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/991dc7d3bea8bff9fd21a646177fa11894f07c96"
+    },
+    {
+      "path": "RELEASE-1.4.2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da3aa2abc8db0df3222a38131273a295e395e4b2",
+      "size": 4712,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/da3aa2abc8db0df3222a38131273a295e395e4b2"
+    },
+    {
+      "path": "RELEASE-1.4.3.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "071f8e3bc32809d9467b2db3fdee28b45d5d9eaf",
+      "size": 3550,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/071f8e3bc32809d9467b2db3fdee28b45d5d9eaf"
+    },
+    {
+      "path": "RELEASE-1.4.5.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b176f3290b7fedc4070782dcc354a54bc2eadc92",
+      "size": 1010,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/b176f3290b7fedc4070782dcc354a54bc2eadc92"
+    },
+    {
+      "path": "RELEASE-1.4.6.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9275f25d0047e79fca0f219d4f88859c13bee53b",
+      "size": 989,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/9275f25d0047e79fca0f219d4f88859c13bee53b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15973cab51b6ec4dc9edcabe1297c6378752c910",
+      "size": 828,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/15973cab51b6ec4dc9edcabe1297c6378752c910"
+    },
+    {
+      "path": "app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17bb09b5df15673fc98a4ecb4a68cf8678c91de1",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/17bb09b5df15673fc98a4ecb4a68cf8678c91de1"
+    },
+    {
+      "path": "app/build.gradle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84292e67bb38ab6b7f0f66483ec54e67bb0f0f5a",
+      "size": 2054,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/84292e67bb38ab6b7f0f66483ec54e67bb0f0f5a"
+    },
+    {
+      "path": "app/proguard-rules.pro",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "app/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4740c8a2145bda2e6440320209844b3fccd26c84",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/4740c8a2145bda2e6440320209844b3fccd26c84"
+    },
+    {
+      "path": "app/src/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e847ac183789bbf40d0c248644305d640f72ff7",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/2e847ac183789bbf40d0c248644305d640f72ff7"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27abd9e79a9e4ddf7d8b73922ab29101156aacf8",
+      "size": 4378,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/27abd9e79a9e4ddf7d8b73922ab29101156aacf8"
+    },
+    {
+      "path": "app/src/main/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b69f674436b6748314ef15a99e3bd88cde3dcc8f",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/b69f674436b6748314ef15a99e3bd88cde3dcc8f"
+    },
+    {
+      "path": "app/src/main/assets/MAGPIE_LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f840b8d9149480136d3a040ed1a74053bce1b20d",
+      "size": 1063,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/f840b8d9149480136d3a040ed1a74053bce1b20d"
+    },
+    {
+      "path": "app/src/main/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62f656d30c0272a1f28c51dd1b62c8628bc9f7b1",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/62f656d30c0272a1f28c51dd1b62c8628bc9f7b1"
+    },
+    {
+      "path": "app/src/main/java/com",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "43f672084ad258f11b394981f75aca50895c27fe",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/43f672084ad258f11b394981f75aca50895c27fe"
+    },
+    {
+      "path": "app/src/main/java/com/magpie",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "28edc2653ad47a411a673e848ca721bf4d2e6baf",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/28edc2653ad47a411a673e848ca721bf4d2e6baf"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e35bc4c01dd2c4e85c67d3b64457ccbe59754ea",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/4e35bc4c01dd2c4e85c67d3b64457ccbe59754ea"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/AddProviderSheet.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57ccb4cbacc5985dea44f57fd30fbf6eed0da861",
+      "size": 11892,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/57ccb4cbacc5985dea44f57fd30fbf6eed0da861"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/ApkFileProvider.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "520898952985de8a95dcd7e2730dfbdf31a88223",
+      "size": 1895,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/520898952985de8a95dcd7e2730dfbdf31a88223"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/App.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a71ffbf7cf41ba28250db2fe601a8d3b714e83e8",
+      "size": 2857,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/a71ffbf7cf41ba28250db2fe601a8d3b714e83e8"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/BackgroundGuide.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bdbfb4f42b509093b1776d29a747a6d6c650904",
+      "size": 6719,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/9bdbfb4f42b509093b1776d29a747a6d6c650904"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/Collapse.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5664ecc552cc72d2d7215985f990516585d321d",
+      "size": 3708,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/f5664ecc552cc72d2d7215985f990516585d321d"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/CtxSheet.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06298e115b40df710f9a56e0c0b75cd3177af9ac",
+      "size": 33959,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/06298e115b40df710f9a56e0c0b75cd3177af9ac"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/FileManager.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7da0fa9bdd3f6f2550fbc4a591df08998821efd4",
+      "size": 16501,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/7da0fa9bdd3f6f2550fbc4a591df08998821efd4"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/FreezeGuard.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82b4a7a2e3d0d235015ac598cd19ceae419746c9",
+      "size": 10136,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/82b4a7a2e3d0d235015ac598cd19ceae419746c9"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/GatewayService.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffdad6d27c4579310e1165e31079e7ffd14902b2",
+      "size": 41088,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/ffdad6d27c4579310e1165e31079e7ffd14902b2"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/LanInfo.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97a916dd6458aea7d45bd0fe5079bb1d08a28cbf",
+      "size": 6410,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/97a916dd6458aea7d45bd0fe5079bb1d08a28cbf"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/LanSync.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "121c0ef8c967b650a800c2310004993746d2e2aa",
+      "size": 3452,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/121c0ef8c967b650a800c2310004993746d2e2aa"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/LivePanel.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9199338d516fef681d494efc2e150c9483ddc88",
+      "size": 24294,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/f9199338d516fef681d494efc2e150c9483ddc88"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/LocalProxy.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34bf89c476555f05ff7070b815d3a0356f54ecea",
+      "size": 10289,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/34bf89c476555f05ff7070b815d3a0356f54ecea"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/M3.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c6862ebd2e95ba188878f540baf3d4228e8b282",
+      "size": 14625,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/1c6862ebd2e95ba188878f540baf3d4228e8b282"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/MagpieApi.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4010110a42b7048bcdeacf59edebfe4b313fcb4c",
+      "size": 10029,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/4010110a42b7048bcdeacf59edebfe4b313fcb4c"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/MainActivity.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3d0374d9d8c4ae44e39e463c8be667134a6a395",
+      "size": 43732,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/b3d0374d9d8c4ae44e39e463c8be667134a6a395"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/NativeData.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e28bd2c8eff3342460f9a1f498389ee6db01c5e0",
+      "size": 10681,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/e28bd2c8eff3342460f9a1f498389ee6db01c5e0"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/NativeHome.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "712777c98f6b75cd7db18c6c0d425bc96e96f0e5",
+      "size": 51304,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/712777c98f6b75cd7db18c6c0d425bc96e96f0e5"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/NativePage.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13bddd2b78d939a11e29219d0642c09e51bd701a",
+      "size": 11837,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/13bddd2b78d939a11e29219d0642c09e51bd701a"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/NativePageAccounts.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09d1f81f29c516b2ecd47c955f83433cb6b956af",
+      "size": 53722,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/09d1f81f29c516b2ecd47c955f83433cb6b956af"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/NativePageOverview.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d03836e7647ffd724ac2ce27886a2fb743d937b6",
+      "size": 37168,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/d03836e7647ffd724ac2ce27886a2fb743d937b6"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/NativePageRoutes.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ae25773e7d7b994559aea7614b743bbd9d14509",
+      "size": 3581,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/8ae25773e7d7b994559aea7614b743bbd9d14509"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/NativePageUsage.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de9416d099b3d9127f990713f38591552e81d679",
+      "size": 17260,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/de9416d099b3d9127f990713f38591552e81d679"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/PartSheet.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc78c95f4d2c347fd4b65590d6da340e72512e56",
+      "size": 11459,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/cc78c95f4d2c347fd4b65590d6da340e72512e56"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/PluginTools.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9f244fbd398ea2b2d4c1c5da4057e7074fa9137",
+      "size": 24132,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/f9f244fbd398ea2b2d4c1c5da4057e7074fa9137"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/Prefs.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cd40bffe805164f23a7d4a6ff91b80ceaef7094",
+      "size": 16100,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/4cd40bffe805164f23a7d4a6ff91b80ceaef7094"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/ProviderIcons.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbba33000695e223f3dc89b525483c2a57413afa",
+      "size": 7214,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/cbba33000695e223f3dc89b525483c2a57413afa"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/PullToRefresh.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebf44928979bc44ea8764f9c87360ca91d9800ba",
+      "size": 8675,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/ebf44928979bc44ea8764f9c87360ca91d9800ba"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/QuotaAgg.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86fa2500d8a65cc12391ae5234068582fea96351",
+      "size": 11471,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/86fa2500d8a65cc12391ae5234068582fea96351"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/QuotaCache.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68c65012e513c368ba5c173dfaf5457d7ab0ba3b",
+      "size": 3424,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/68c65012e513c368ba5c173dfaf5457d7ab0ba3b"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/SettingsActivity.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38115d48208a964a9125b451bf6c107ccaeada24",
+      "size": 25293,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/38115d48208a964a9125b451bf6c107ccaeada24"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/ShellUpdateFlow.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e4211fcd2052ed3aa0b4786b1d7c5fc0c8f3e51",
+      "size": 10705,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/8e4211fcd2052ed3aa0b4786b1d7c5fc0c8f3e51"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/ShellUpdater.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b27847e38291d52a31e32f5e328673abff462f81",
+      "size": 7660,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/b27847e38291d52a31e32f5e328673abff462f81"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/TraceLog.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa92508d9402b2080dce5196a3105842d7fd09be",
+      "size": 15425,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/aa92508d9402b2080dce5196a3105842d7fd09be"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/TraceSource.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4507867705d25b32697fc87fd4316a5cdfff42e",
+      "size": 3274,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/f4507867705d25b32697fc87fd4316a5cdfff42e"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/Ui.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e97680879135510ac7c247a0e764744ef8bb0596",
+      "size": 16660,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/e97680879135510ac7c247a0e764744ef8bb0596"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/UpdateActivity.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76dff9e7150acc20782db089c8f622f58fd5781b",
+      "size": 14089,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/76dff9e7150acc20782db089c8f622f58fd5781b"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/Updater.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceb70aabcd9d9823ce21dfea0b9f003c611047c2",
+      "size": 28147,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/ceb70aabcd9d9823ce21dfea0b9f003c611047c2"
+    },
+    {
+      "path": "app/src/main/java/com/magpie/android/Zh.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ee56536393693480a114f43923a44fe93644c1e",
+      "size": 4532,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/2ee56536393693480a114f43923a44fe93644c1e"
+    },
+    {
+      "path": "app/src/main/res",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a430cf8a1539473b3711fd45359525731a6bf492",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/a430cf8a1539473b3711fd45359525731a6bf492"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c052318900bc860a9545bea9b266a7265256ce9",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/4c052318900bc860a9545bea9b266a7265256ce9"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/ic_magpie_bird.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6531d29b4685834b3efbc55fdfc787cc21350eb1",
+      "size": 6619,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/6531d29b4685834b3efbc55fdfc787cc21350eb1"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_anthropic.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66bec75afd65fc230cd4de896b84d94c79e9cc88",
+      "size": 2319,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/66bec75afd65fc230cd4de896b84d94c79e9cc88"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_antigravity_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "360bbaa76c1b547003575294799ed19bdb6ddc2f",
+      "size": 14953,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/360bbaa76c1b547003575294799ed19bdb6ddc2f"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_baidu_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "248c833c38c1e0a6ab33dc0a7a8af8d9edcda336",
+      "size": 5924,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/248c833c38c1e0a6ab33dc0a7a8af8d9edcda336"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_cerebras.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c4a19b403d3faab4f7fa4dedf54e10847a97e34",
+      "size": 4444,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/5c4a19b403d3faab4f7fa4dedf54e10847a97e34"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_chatglm_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26a11b00db59307e4b53cb5e0fbd56e0c5f2f479",
+      "size": 10188,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/26a11b00db59307e4b53cb5e0fbd56e0c5f2f479"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_claude_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "285d25b5c3bf579effdce9dabb3c967b82493a3b",
+      "size": 8458,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/285d25b5c3bf579effdce9dabb3c967b82493a3b"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_cline.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b011ddbb559cd302764d1735eb7a8fa5aaba5122",
+      "size": 2689,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/b011ddbb559cd302764d1735eb7a8fa5aaba5122"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_codex_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9a448d5c4be52989b1ecf708b0fd27cc8bace14",
+      "size": 4171,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/e9a448d5c4be52989b1ecf708b0fd27cc8bace14"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_copilot_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9397f32c463833e87deb4200532fb416ae0862d",
+      "size": 11829,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/c9397f32c463833e87deb4200532fb416ae0862d"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_cursor.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efe3db1cf3edb8769d814e7aed2bc9cbe3795f46",
+      "size": 2349,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/efe3db1cf3edb8769d814e7aed2bc9cbe3795f46"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_deepseek_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5814be1bcf6886ba027d4d4274726f69e52e53b5",
+      "size": 5551,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/5814be1bcf6886ba027d4d4274726f69e52e53b5"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_fireworks_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c04cc9d3df41fc63311eba37e84d4cbe8eab9f75",
+      "size": 4017,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/c04cc9d3df41fc63311eba37e84d4cbe8eab9f75"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_gemini_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2bb4511bce0825c73de60b39ec4fa597943f062",
+      "size": 8098,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/d2bb4511bce0825c73de60b39ec4fa597943f062"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_groq.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "547ad07b5fa809b610055b6532e76c274507a691",
+      "size": 2380,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/547ad07b5fa809b610055b6532e76c274507a691"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_kimi.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07723ca24206d057521761915bf1c330b962c035",
+      "size": 2018,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/07723ca24206d057521761915bf1c330b962c035"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_lmstudio.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c513eb79311e435b2be8df522bbc32a9e3f76db0",
+      "size": 2354,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/c513eb79311e435b2be8df522bbc32a9e3f76db0"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_mistral_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b3879d06916ef3509ef6aea8077f3a35940e2d2",
+      "size": 878,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/2b3879d06916ef3509ef6aea8077f3a35940e2d2"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_moonshot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd691e778399bdd80232f5a5473436f6a359f2df",
+      "size": 4191,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/dd691e778399bdd80232f5a5473436f6a359f2df"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_ollama.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbfa854973118a1df5cd12c9c090471bd8970505",
+      "size": 4218,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/fbfa854973118a1df5cd12c9c090471bd8970505"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_openai.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3516aa0201389c56573208bdd5996ae267d8c50",
+      "size": 5277,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/e3516aa0201389c56573208bdd5996ae267d8c50"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_opencode.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "806e554a03f9e0f25a8655a10610e5c7160a08a0",
+      "size": 439,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/806e554a03f9e0f25a8655a10610e5c7160a08a0"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_openrouter.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7789d280c34bbcfa668c656ea6434dfd8223d84f",
+      "size": 2266,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/7789d280c34bbcfa668c656ea6434dfd8223d84f"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_perplexity_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e86bebf25ecf41a7eef535268e563f67323e4b4",
+      "size": 5437,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/2e86bebf25ecf41a7eef535268e563f67323e4b4"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_qwen_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fd334d9aec23e58c460274165a75acec96f903e",
+      "size": 6485,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/2fd334d9aec23e58c460274165a75acec96f903e"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_siliconcloud_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3298fce78e819d1daec3fe6de57820c8adb885bb",
+      "size": 943,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/3298fce78e819d1daec3fe6de57820c8adb885bb"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_tencent_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6545e6cfd9a77422b2521ab30499acfed8839bf3",
+      "size": 2413,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/6545e6cfd9a77422b2521ab30499acfed8839bf3"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_together_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd987552a5782604cd9e0a0a221d8729675d455c",
+      "size": 5523,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/cd987552a5782604cd9e0a0a221d8729675d455c"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_trae.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ead833a00458e88f096c917b82c4ee97eb42e9b",
+      "size": 1009,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/9ead833a00458e88f096c917b82c4ee97eb42e9b"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_volcengine_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30930432e69e5f1687b2efe67cfc596f8e35789c",
+      "size": 3680,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/30930432e69e5f1687b2efe67cfc596f8e35789c"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_windsurf.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfdff4ee5e2a5e2283106bdf00fd3242f9d148da",
+      "size": 2400,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/dfdff4ee5e2a5e2283106bdf00fd3242f9d148da"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_workbuddy_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98db3cd7936234fff261b57b65c3a91c071edf6d",
+      "size": 8013,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/98db3cd7936234fff261b57b65c3a91c071edf6d"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_xai.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "617cf212f835810579d3ed0de5d6319b7ba2888a",
+      "size": 2342,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/617cf212f835810579d3ed0de5d6319b7ba2888a"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_zed.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e877f98eb1e57ccb0cb6c1b84e36fe5c39493ee3",
+      "size": 1799,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/e877f98eb1e57ccb0cb6c1b84e36fe5c39493ee3"
+    },
+    {
+      "path": "app/src/main/res/drawable-nodpi/pv_zhipu_color.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e191939a0cf9e15a4e3fc086f0b1d5cdc3aa695",
+      "size": 5915,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/4e191939a0cf9e15a4e3fc086f0b1d5cdc3aa695"
+    },
+    {
+      "path": "app/src/main/res/drawable",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ab5f990a038ca8fefb1a15d84d471c87974811c",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/6ab5f990a038ca8fefb1a15d84d471c87974811c"
+    },
+    {
+      "path": "app/src/main/res/drawable/dot_off.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00e93afb4341792f971bcfcd5a457995342540e5",
+      "size": 228,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/00e93afb4341792f971bcfcd5a457995342540e5"
+    },
+    {
+      "path": "app/src/main/res/drawable/dot_ok.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0ae8c42c47a9c933b98f0569bb3080d43146d0c",
+      "size": 228,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/c0ae8c42c47a9c933b98f0569bb3080d43146d0c"
+    },
+    {
+      "path": "app/src/main/res/layout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f29fb9d6d16f747dd564dab098ff2adc6325447",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/9f29fb9d6d16f747dd564dab098ff2adc6325447"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_main.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40fffd5ad2f8bb0c32c5b76911a18f642ab2466a",
+      "size": 3143,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/40fffd5ad2f8bb0c32c5b76911a18f642ab2466a"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_settings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "692cdd7a3ae593b92c1130ba40a5e9bfb6e9b6a5",
+      "size": 16412,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/692cdd7a3ae593b92c1130ba40a5e9bfb6e9b6a5"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_update.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e82579d8b33955c17ac5a42f69a582e1bca9f44",
+      "size": 7190,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/7e82579d8b33955c17ac5a42f69a582e1bca9f44"
+    },
+    {
+      "path": "app/src/main/res/layout/dialog_about.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54c4dc8f31f240f0d0cc689642a96f60dab3ba50",
+      "size": 3984,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/54c4dc8f31f240f0d0cc689642a96f60dab3ba50"
+    },
+    {
+      "path": "app/src/main/res/values-night",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58e1d6307e969c462ffbd6e0b94e3f59c24e8a80",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/58e1d6307e969c462ffbd6e0b94e3f59c24e8a80"
+    },
+    {
+      "path": "app/src/main/res/values-night/themes.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "985a2e2b1fdb8a1a999ae67f813bbe5d0084e620",
+      "size": 1564,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/985a2e2b1fdb8a1a999ae67f813bbe5d0084e620"
+    },
+    {
+      "path": "app/src/main/res/values",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de7cd47777fb291110867fdef7d7fcaf7c773df2",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/de7cd47777fb291110867fdef7d7fcaf7c773df2"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfd61396535d158edce5987c95cb3e71f139f91a",
+      "size": 11738,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/cfd61396535d158edce5987c95cb3e71f139f91a"
+    },
+    {
+      "path": "app/src/main/res/values/themes.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f988fc55ac08c0a4c715f93ea7d1b5705a0d8ce",
+      "size": 2240,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/1f988fc55ac08c0a4c715f93ea7d1b5705a0d8ce"
+    },
+    {
+      "path": "app/src/main/res/xml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a273624e2a6dcfbdbcc2786b87bbcc0fb33b459",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/7a273624e2a6dcfbdbcc2786b87bbcc0fb33b459"
+    },
+    {
+      "path": "app/src/main/res/xml/network_security_config.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f43fb647b178fc8c23e1a20ab9cb4ce03274a7d0",
+      "size": 561,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/f43fb647b178fc8c23e1a20ab9cb4ce03274a7d0"
+    },
+    {
+      "path": "build.gradle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "424dfb2fe6fe10aa1042593c1779f0eb406a736d",
+      "size": 363,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/424dfb2fe6fe10aa1042593c1779f0eb406a736d"
+    },
+    {
+      "path": "gradle.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "433e8610a18103daaf7ac317884adab18acb62f0",
+      "size": 280,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/433e8610a18103daaf7ac317884adab18acb62f0"
+    },
+    {
+      "path": "gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4c67134b45bd03ee9869fef331e434d70a92d6a",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/d4c67134b45bd03ee9869fef331e434d70a92d6a"
+    },
+    {
+      "path": "gradle/wrapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6840db3cb878f56427d77e79897fe6377bf9d4d9",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/6840db3cb878f56427d77e79897fe6377bf9d4d9"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b58cb11c9c9d2114d64d95af9060442fdc4275a",
+      "size": 251,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/7b58cb11c9c9d2114d64d95af9060442fdc4275a"
+    },
+    {
+      "path": "screenshots",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93d6361fa259960f5fd8755722d2dff52e5a2b14",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/93d6361fa259960f5fd8755722d2dff52e5a2b14"
+    },
+    {
+      "path": "screenshots/accounts.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b07dbc57f1e55aa6725d7108f15d493f160e75fd",
+      "size": 443632,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/b07dbc57f1e55aa6725d7108f15d493f160e75fd"
+    },
+    {
+      "path": "screenshots/lan-share.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9b9547bbde5d431995162cf0d9037ba05bd292c",
+      "size": 146577,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/b9b9547bbde5d431995162cf0d9037ba05bd292c"
+    },
+    {
+      "path": "screenshots/overview.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "660b2fd010886133b91028d81e68d62ccc2c2f5f",
+      "size": 341229,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/660b2fd010886133b91028d81e68d62ccc2c2f5f"
+    },
+    {
+      "path": "screenshots/routes.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15824cda0752603123e0544cac0c450b3282d100",
+      "size": 219533,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/15824cda0752603123e0544cac0c450b3282d100"
+    },
+    {
+      "path": "screenshots/routing.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a17ce951ab5879ed03a3e71c6e342e7002431b6",
+      "size": 176620,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/6a17ce951ab5879ed03a3e71c6e342e7002431b6"
+    },
+    {
+      "path": "screenshots/usage.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b12cb7b6128f8e03d6845ab44aa41fc643963cef",
+      "size": 353882,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/b12cb7b6128f8e03d6845ab44aa41fc643963cef"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64a1ce07d323fa15d8217623ddcb3ea571daca64",
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/trees/64a1ce07d323fa15d8217623ddcb3ea571daca64"
+    },
+    {
+      "path": "scripts/build-apk-local.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f032bb397a04fc25a0a4f00285d55bf3cf77cd8",
+      "size": 7389,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/8f032bb397a04fc25a0a4f00285d55bf3cf77cd8"
+    },
+    {
+      "path": "scripts/build-apk.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f0e3c2d2d8bdf7be479558de4dab4d26734e3cfb",
+      "size": 303,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/f0e3c2d2d8bdf7be479558de4dab4d26734e3cfb"
+    },
+    {
+      "path": "scripts/build-magpie.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a017658d303a5226dc6afcb0a5ad63b8df77af02",
+      "size": 1481,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/a017658d303a5226dc6afcb0a5ad63b8df77af02"
+    },
+    {
+      "path": "scripts/magpie-cli.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d2b381b6f1cfd845d5d3e3fee34ea56c5b07b17",
+      "size": 1813,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/7d2b381b6f1cfd845d5d3e3fee34ea56c5b07b17"
+    },
+    {
+      "path": "scripts/magpie.config",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d6fe1b3d8ddb0d6053c8ff331f1dc74c937ddfa",
+      "size": 998,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/3d6fe1b3d8ddb0d6053c8ff331f1dc74c937ddfa"
+    },
+    {
+      "path": "scripts/magpie.service",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74db65c4274376fb57e391e3e4beda710a15755b",
+      "size": 8920,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/74db65c4274376fb57e391e3e4beda710a15755b"
+    },
+    {
+      "path": "scripts/release.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "999d4a29cb83992d05a272c07c4b6d577a07a181",
+      "size": 8226,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/999d4a29cb83992d05a272c07c4b6d577a07a181"
+    },
+    {
+      "path": "scripts/status.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41c78ce194eb958ab643fea72c4c6a50e7ec30cc",
+      "size": 6122,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/41c78ce194eb958ab643fea72c4c6a50e7ec30cc"
+    },
+    {
+      "path": "scripts/sync-binary.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6612401f3b8cab79688924e04ff1e7844866cf16",
+      "size": 512,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/6612401f3b8cab79688924e04ff1e7844866cf16"
+    },
+    {
+      "path": "settings.gradle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8478a11153367dfe0d6fd4b8a1165f4ed8d75a49",
+      "size": 327,
+      "url": "https://api.github.com/repos/yqing004-boop/magpie-android/git/blobs/8478a11153367dfe0d6fd4b8a1165f4ed8d75a49"
+    }
+  ],
+  "truncated": false
+}

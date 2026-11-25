@@ -1,0 +1,9 @@
+com/termux/shared/termux/extrakeys/ExtraKeysView
+com/termux/x11/CmdEntryPoint
+com/termux/x11/LoriePreferences
+com/termux/x11/LoriePreferences$LoriePreferenceFragment
+com/termux/x11/MainActivity
+com/termux/x11/Prefs
+com/termux/x11/utils/KeyInterceptor
+com/termux/x11/utils/X11ToolbarViewPager$OnPageChangeListener
+com/termux/x11/utils/X11ToolbarViewPager$PageAdapter

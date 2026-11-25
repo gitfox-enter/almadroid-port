@@ -1,0 +1,351 @@
+#!/usr/bin/env node
+/**
+ * AlmaDroid local relay shim.
+ *
+ * 官方 App 的连接路径固定是：  ws://<host>:<port>/c/<routingHash>/__alma_e2e__
+ * 而 alma-server 的 E2E 监听器只认：  ws://127.0.0.1:23019/__alma_e2e__
+ *
+ * 本脚本在本机扮演「中继」的角色：把任意 /c/.../__alma_e2e__ 的 WebSocket
+ * 原样桥接到 23019 的 /__alma_e2e__，让官方 App 直连本机、不经过云端中继。
+ *
+ * 鉴权不依赖 URL：E2E 隧道在握手协议内用配对码派生密钥，路径里的 hash 只是
+ * relay 用来选路的标识，本机只有一个服务，可以直接忽略。
+ *
+ * 用法：node local-relay.js [port]   (默认 23017)
+ */
+const http = require('http');
+const net = require('net');
+const path = require('path');
+
+function loadWs() {
+  // 优先用 alma-server 自带的 ws，避免额外依赖
+  const candidates = [
+    path.join(__dirname, 'ws'),
+    path.join(__dirname, 'node_modules', 'ws'),
+    path.join(__dirname, 'lib', 'node_modules', 'ws'),   // /opt/alma/lib/node_modules/ws
+    path.join(__dirname, '..', 'lib', 'node_modules', 'ws'),
+    'ws',
+  ];
+  for (const c of candidates) {
+    try {
+      return require(c);
+    } catch (_) { /* try next */ }
+  }
+  throw new Error('ws module not found');
+}
+
+const WebSocket = loadWs();
+const WebSocketServer = WebSocket.WebSocketServer || WebSocket.Server;
+
+const LISTEN_PORT = parseInt(process.argv[2] || process.env.ALMA_LOCAL_RELAY_PORT || '23017', 10);
+const TARGET_PORT = parseInt(process.env.ALMA_E2E_PORT || '23019', 10);
+const TARGET_PATH = '/__alma_e2e__';
+
+const log = (...a) => console.log('[local-relay]', ...a);
+
+// ---- 1. 普通 HTTP：把 /api/* 等直接反代到 23001，方便官方 App 的 REST 调用 ----
+const API_PORT = parseInt(process.env.ALMA_API_PORT || '23001', 10);
+
+const VNC_DIR = process.env.ALMA_VNC_DIR || '/opt/alma/novnc';
+const fs = require('fs');
+const pathMod = require('path');
+
+const server = http.createServer((req, res) => {
+  // 非 E2E 配对：App 会请求 /c/<routingHash>/... ，把这段前缀剥掉再转发
+  let path = req.url || '/';
+
+  // --- 诊断：/vnc-info 告诉你 VNC_DIR 是否真的存在 ---
+  if (path === '/vnc-info') {
+    const fs2 = require('fs');
+    let listing = [];
+    try { listing = fs2.readdirSync(VNC_DIR); } catch (e) { listing = ['ERR: ' + e.message]; }
+    res.writeHead(200, { 'content-type': 'application/json; charset=utf-8' });
+    res.end(JSON.stringify({
+      vncDir: VNC_DIR,
+      exists: fs2.existsSync(VNC_DIR),
+      vncHtml: fs2.existsSync(pathMod.join(VNC_DIR, 'vnc.html')),
+      entries: listing.slice(0, 20),
+    }, null, 2));
+    return;
+  }
+
+  // --- /vnc：本地桌面（noVNC 静态页）---
+  if (path === '/vnc' || path === '/vnc/') {
+    const hh = (req.headers.host || '').split(':')[0] || '127.0.0.1';
+    const qs = 'host=' + encodeURIComponent(hh) + '&port=' + LISTEN_PORT + '&path=vnc-ws&encrypt=0&autoconnect=1&resize=scale';
+    res.writeHead(302, { location: '/vnc/vnc.html#' + qs });
+    return res.end();
+  }
+  if (path === '/vnc' || path.startsWith('/vnc/') || path.startsWith('/vnc?')) {
+    let rel = path.replace(/^\/vnc\/?/, '').split('?')[0] || 'vnc.html';
+    if (rel === '' ) rel = 'vnc.html';
+    // 防目录穿越
+    const full = pathMod.resolve(VNC_DIR, rel);
+    if (!full.startsWith(pathMod.resolve(VNC_DIR))) {
+      res.writeHead(403); return res.end('forbidden');
+    }
+    fs.readFile(full, (err, buf) => {
+      if (err) { res.writeHead(404); return res.end('not found'); }
+      const ext = pathMod.extname(full).toLowerCase();
+      const mime = ext === '.html' ? 'text/html; charset=utf-8'
+        : ext === '.js' ? 'application/javascript'
+        : ext === '.css' ? 'text/css'
+        : ext === '.png' ? 'image/png'
+        : ext === '.svg' ? 'image/svg+xml'
+        : 'application/octet-stream';
+      res.writeHead(200, { 'content-type': mime, 'cache-control': 'no-store' });
+      res.end(buf);
+    });
+    return;
+  }
+  const m = path.match(/^\/c\/[^/]+(\/.*)?$/);
+  if (m) {
+    path = m[1] || '/';
+    log('rest via /c/ ->', path);
+  }
+  const upstream = http.request({
+    host: '127.0.0.1',
+    port: API_PORT,
+    path: path,
+    method: req.method,
+    headers: { ...req.headers, host: `127.0.0.1:${API_PORT}` },
+  }, (up) => {
+    res.writeHead(up.statusCode || 502, up.headers);
+    up.pipe(res);
+  });
+  upstream.on('error', (e) => {
+    log('http proxy error:', e.message);
+    if (!res.headersSent) res.writeHead(502, { 'content-type': 'application/json' });
+    res.end(JSON.stringify({ error: 'local relay upstream failed: ' + e.message }));
+  });
+  req.pipe(upstream);
+});
+
+// ---- 2. WebSocket：把 /c/*/__alma_e2e__ 桥接到 23019 的 /__alma_e2e__ ----
+const wss = new WebSocketServer({ noServer: true, maxPayload: 64 * 1024 * 1024 });
+
+server.on('upgrade', (req, socket, head) => {
+  const url = (req.url || '').split('?')[0];
+
+  // --- /vnc-ws：把 noVNC 的 WebSocket 桥到本机 x11vnc 的 5900 端口 ---
+  if (url === '/vnc-ws') {
+    handleVncWs(req, socket, head);
+    return;
+  }
+
+  // 官方客户端走的是 /agent（公网 relay 的端点），本地 relay 也要接住它。
+  // 同时保留 /c/<hash>/__alma_e2e__ 这条官方配对路径。
+  const isE2E = url.includes('__alma_e2e__')
+             || url === '/agent'
+             || url.startsWith('/agent?');
+  if (!isE2E) {
+    log('upgrade rejected (not e2e):', url);
+    socket.destroy();
+    return;
+  }
+  wss.handleUpgrade(req, socket, head, (client) => {
+    log('client attached:', url);
+    // 23019 只接受路径正好是 TARGET_PATH（/__alma_e2e__）。
+    // 客户端可能发 /agent 或 /c/<hash>/__alma_e2e__，转发时统一改写。
+    const upstream = new WebSocket(`ws://127.0.0.1:${TARGET_PORT}${TARGET_PATH}`);
+    // 双向保活：ws 库会自动回应 ping；用原生 ping 触发对方回 pong，避免空闲被断开
+    const alive = { client: true, upstream: true };
+    client.on('pong', () => { alive.client = true; });
+    upstream.on('pong', () => { alive.upstream = true; });
+
+    const pending = [];
+    let upstreamOpen = false;
+
+    upstream.on('open', () => {
+      upstreamOpen = true;
+      log('upstream connected');
+      for (const msg of pending.splice(0)) {
+        upstream.send(msg.data, { binary: msg.binary });
+      }
+    });
+
+    client.on('message', (data, isBinary) => {
+      if (upstreamOpen) {
+        upstream.send(data, { binary: isBinary });
+      } else {
+        pending.push({ data, binary: isBinary });
+      }
+    });
+
+    upstream.on('message', (data, isBinary) => {
+      if (client.readyState === WebSocket.OPEN) {
+        client.send(data, { binary: isBinary });
+      }
+    });
+
+    // 统计转发字节数，帮助判断 E2E 握手走到哪一步
+    let c2u = 0, u2c = 0;
+    const closeBoth = (why) => {
+      log(`closing: ${why} | client->upstream=${c2u}B upstream->client=${u2c}B`);
+      try { client.close(); } catch (_) {}
+      try { upstream.close(); } catch (_) {}
+    };
+
+    client.on('close', (code, reason) =>
+      closeBoth(`client closed code=${code} reason=${reason && reason.toString()}`));
+    client.on('error', (e) => closeBoth('client error: ' + e.message));
+    upstream.on('close', (code, reason) =>
+      closeBoth(`upstream closed code=${code} reason=${reason && reason.toString()}`));
+    upstream.on('error', (e) => closeBoth('upstream error: ' + e.message));
+
+    // 显式透传 ping/pong，确保两端心跳语义一致
+    client.on('ping', (d) => { try { upstream.ping(d); } catch (_) {} });
+    upstream.on('ping', (d) => { try { client.ping(d); } catch (_) {} });
+
+    // 原始字节计数（在 message 钩子里已转发，这里补计）
+    const origClientMsg = client.listeners('message');
+    client.removeAllListeners('message');
+    client.on('message', (data, isBinary) => {
+      c2u += (data && data.length) || 0;
+      for (const fn of origClientMsg) fn.call(client, data, isBinary);
+    });
+    const origUpMsg = upstream.listeners('message');
+    upstream.removeAllListeners('message');
+    upstream.on('message', (data, isBinary) => {
+      u2c += (data && data.length) || 0;
+      for (const fn of origUpMsg) fn.call(upstream, data, isBinary);
+    });
+  });
+});
+
+// 定期向所有活跃客户端发 ping，保持隧道活性
+setInterval(() => {
+  for (const c of wss.clients) {
+    if (c.readyState === WebSocket.OPEN) {
+      try { c.ping(); } catch (_) {}
+    }
+  }
+}, 20000).unref();
+
+process.on('exit', (code, sig) => {
+  try {
+    require('fs').appendFileSync('/alma-logs/relay.log',
+      '[local-relay] exit code=' + code + ' sig=' + sig + '\n');
+  } catch (_) { /* ignore */ }
+});
+server.listen(LISTEN_PORT, '0.0.0.0', () => {
+  log(`listening on 0.0.0.0:${LISTEN_PORT}`);
+  log(`  REST  -> 127.0.0.1:${API_PORT}`);
+  log(`  WS    -> 127.0.0.1:${TARGET_PORT}${TARGET_PATH}`);
+});
+
+// 健康自检：确认 23019 是否在听
+function probeE2E() {
+  const s = net.connect(TARGET_PORT, '127.0.0.1');
+  s.on('connect', () => { log('E2E listener 23019 is UP'); s.destroy(); });
+  s.on('error', (e) => log('E2E listener 23019 is DOWN:', e.code));
+}
+setTimeout(probeE2E, 1500);
+
+// ---- VNC WebSocket 桥（最小 websockify，无需 Python）----
+const VNC_TCP_PORT = parseInt(process.env.ALMA_VNC_PORT || '5900', 10);
+
+function handleVncWs(req, socket, head) {
+  const key = req.headers['sec-websocket-key'];
+  if (!key) { socket.destroy(); return; }
+
+  const accept = require('crypto')
+    .createHash('sha1')
+    .update(key + '258EAFA5-E914-47DA-95CA-C5AB0DC85B11')
+    .digest('base64');
+
+  socket.write(
+    'HTTP/1.1 101 Switching Protocols\r\n' +
+    'Upgrade: websocket\r\n' +
+    'Connection: Upgrade\r\n' +
+    'Sec-WebSocket-Accept: ' + accept + '\r\n\r\n'
+  );
+  log('vnc: websocket handshake ok');
+
+  const tcp = net.connect(VNC_TCP_PORT, '127.0.0.1');
+  let tcpReady = false;
+  const pending = [];
+
+  tcp.on('connect', () => {
+    tcpReady = true;
+    log('vnc: tcp ' + VNC_TCP_PORT + ' connected');
+    while (pending.length) writeWsFrame(socket, pending.shift());
+  });
+  tcp.on('data', (buf) => writeWsFrame(socket, buf));
+  tcp.on('error', (e) => { log('vnc tcp error:', e.message); try { socket.destroy(); } catch (_) {} });
+  tcp.on('close', () => { try { socket.destroy(); } catch (_) {} });
+
+  let buf = Buffer.alloc(0);
+  socket.on('data', (chunk) => {
+    buf = Buffer.concat([buf, chunk]);
+    for (;;) {
+      const f = decodeFrame(buf);
+      if (!f) break;
+      buf = buf.slice(f.consumed);
+      if (f.opcode === 0x8) { try { tcp.end(); socket.end(); } catch (_) {} return; }
+      if (f.opcode === 0x9) { writeWsFrame(socket, f.payload, 0xA); continue; }
+      if (f.opcode === 0xA) continue;
+      if (f.payload.length) {
+        if (tcpReady) tcp.write(f.payload);
+        else pending.push(f.payload);
+      }
+    }
+  });
+  socket.on('error', () => { try { tcp.destroy(); } catch (_) {} });
+  socket.on('close', () => { try { tcp.destroy(); } catch (_) {} });
+}
+
+
+function decodeFrame(b) {
+  if (b.length < 2) return null;
+  const fin = (b[0] & 0x80) !== 0;
+  const opcode = b[0] & 0x0f;
+  const masked = (b[1] & 0x80) !== 0;
+  let len = b[1] & 0x7f;
+  let off = 2;
+  if (len === 126) {
+    if (b.length < 4) return null;
+    len = b.readUInt16BE(2); off = 4;
+  } else if (len === 127) {
+    if (b.length < 10) return null;
+    len = Number(b.readBigUInt64BE(2)); off = 10;
+  }
+  const maskLen = masked ? 4 : 0;
+  if (b.length < off + maskLen + len) return null;
+  let payload = b.slice(off + maskLen, off + maskLen + len);
+  if (masked) {
+    const mask = b.slice(off, off + 4);
+    payload = Buffer.from(payload.map((v, i) => v ^ mask[i & 3]));
+  }
+  return { fin, opcode, payload, consumed: off + maskLen + len };
+}
+
+function writeWsFrame(sock, payload, opcode = 0x2) {
+  try {
+    if (!sock.writable) return;
+    const len = payload.length;
+    let header;
+    if (len < 126) {
+      header = Buffer.from([0x80 | opcode, len]);
+    } else if (len < 65536) {
+      header = Buffer.alloc(4);
+      header[0] = 0x80 | opcode; header[1] = 126;
+      header.writeUInt16BE(len, 2);
+    } else {
+      header = Buffer.alloc(10);
+      header[0] = 0x80 | opcode; header[1] = 127;
+      header.writeBigUInt64BE(BigInt(len), 2);
+    }
+    sock.write(Buffer.concat([header, payload]));
+  } catch (_) { /* 忽略 */ }
+}
+
+setInterval(probeE2E, 30000).unref();
+
+// 进程级容错：任何未捕获异常都不应让局域网入口消失
+process.on('uncaughtException', (e) => log('uncaughtException:', e && e.message));
+process.on('unhandledRejection', (e) => log('unhandledRejection:', e && e.message));
+process.on('SIGPIPE', () => log('SIGPIPE ignored'));
+// proot/shell 退出时会向进程组发信号；relay 作为独立入口应尽量存活
+process.on('SIGHUP', () => log('SIGHUP received (ignored)'));
+process.on('SIGTERM', () => log('SIGTERM received (ignored)'));
